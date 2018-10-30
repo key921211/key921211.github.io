@@ -1,14 +1,107 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
- </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vue_study</title>
+  </head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
 
- <body>
-  <h1>Hello</h1>
- </body>
+    function fnContent(div) {
+      var content = $(div).text().toLowerCase();
+      var offset = $("#" + content).offset();
+      $('html, body').animate({scrollTop : offset.top}, 400);
+      $(".content1-side").hide();
+      $("#"+content+"-side").removeAttr( "style" ).fadeOut();
+      $("#"+content+"-side").show( "clip", 800);
+    }
+    function callback() {
+      setTimeout(function() {
+        $( "#content1-side:visible" ).removeAttr( "style" ).fadeOut();
+      }, 1000 );
+    };
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      font-family: 'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif;
+      height: 100%;
+    }
+
+    .top{
+      width: 100%;
+      height: 40px;
+      display: inline-block;
+      position: fixed;
+    }
+    .top-title{
+      width: auto;
+      float: right;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .title{
+      color: #ffffff;
+      margin-right: 45px;
+      border-bottom: 2px solid;
+      display: inline-block;
+    }
+    .content{
+      background-color: #f2e3de;
+      width: 100%;
+      height: 830px;
+      text-align: center;
+      padding-top: 180px;
+    }
+    .content2{
+      background-color: #aa8579;
+      width: 100%;
+      height: 830px;
+      text-align: center;
+      padding-top: 180px;
+    }
+    .content1-side {
+
+      width: 100%;
+      display: none;
+
+    }
+  </style>
+
+  <body>
+      <div>
+        <div class="top" >
+          <div class="top-title">
+          <div class="title" onclick="fnContent(this);">CONTENT1</div>
+          <div class="title" onclick="fnContent(this);">CONTENT2</div>
+          <div class="title" onclick="fnContent(this);">CONTENT3</div>
+          <div class="title" onclick="fnContent(this);">CONTENT4</div>
+          <div class="title" onclick="fnContent(this);">CONTENT5</div>
+          </div>
+        </div>
+        <div>
+          <div class="content" id="content1">
+            <div id="content1-side" class="content1-side">안뇽!<br>반가워<br>잘가</div>
+          </div>
+          <div class="content2" id="content2">
+            <div id="content2-side" class="content1-side">안뇽!<br>반가워<br>잘가2</div>
+          </div>
+          <div class="content" id="content3">
+            <div id="content3-side" class="content1-side">안뇽!<br>반가워<br>잘가3</div>
+          </div>
+          <div class="content2" id="content4">
+            <div id="content4-side" class="content1-side">안뇽!<br>반가워<br>잘가4</div>
+          </div>
+          <div class="content" id="content5">
+            <div id="content5-side" class="content1-side">안뇽!<br>반가워<br>잘가5</div>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>
