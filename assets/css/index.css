@@ -1,0 +1,35 @@
+@font-face {
+  font-family: NanumSquareEB;
+  src: url("../webfonts/NanumSquareEB.ttf") format("truetype");
+}
+@font-face {
+  font-family: NanumSquareR;
+  src: url("../webfonts/NanumSquareR.ttf") format("truetype");
+}
+
+body {
+  font-family: "NanumSquareEB";
+}
+
+.experience h3,
+h5 {
+  display: inline-block;
+}
+
+.experience {
+  margin-bottom: 50px;
+}
+.experience .date {
+  flex-shrink: 0 !important;
+}
+
+.experience p {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.icon {
+  margin-right: 5px;
+  color: #ffffff;
+}
