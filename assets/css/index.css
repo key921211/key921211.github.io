@@ -6,9 +6,17 @@
   font-family: NanumSquareR;
   src: url("../webfonts/NanumSquareR.ttf") format("truetype");
 }
+@font-face {
+  font-family: NanumBarunGothic;
+  src: url("../webfonts/NanumBarunGothic.ttf") format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothicBold;
+  src: url("../webfonts/NanumBarunGothicBold.ttf") format("truetype");
+}
 
 body {
-  font-family: "NanumSquareEB";
+  font-family: "NanumBarunGothic";
 }
 
 .experience h3,
@@ -25,11 +33,15 @@ h5 {
 
 .experience p {
   font-size: 0.8em;
-  line-height: 1.5em;
-  margin: 0;
+  line-height: 0.2em;
 }
 
-.icon {
+.inner .icon {
   margin-right: 5px;
   color: #ffffff;
+}
+
+#skill span {
+  font-size: 120px;
+  color: #70638e;
 }
